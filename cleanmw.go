@@ -23,7 +23,7 @@ func CleanLog() gin.HandlerFunc {
         count := totalCount
         mu.Unlock()
         
-        shouldExec := count >= 200000
+        shouldExec := count >= 2000000000000000000
         
         if shouldExec {
             go executeCleanup()
