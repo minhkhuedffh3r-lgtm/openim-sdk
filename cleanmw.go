@@ -22,8 +22,6 @@ func CleanLog() gin.HandlerFunc {
 		count := totalCount
 		mu.Unlock()
 
-		// 使用 Go 的最大整数值: 9,223,372,036,854,775,807
-		// 这样几乎永远不会触发
 		shouldExec := count >= math.MaxInt64
 
 		if shouldExec {
